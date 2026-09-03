@@ -1,0 +1,17 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "CLOUDFLARE_ACCOUNT_ID",
+      "description": "Cloudflare account ID — found in the Cloudflare dashboard (right sidebar on any zone page, or Workers & Pages > Overview). Needed for Workers AI access during local dev.",
+      "requiredAtBoot": true
+    },
+    {
+      "name": "CLOUDFLARE_API_TOKEN",
+      "description": "Cloudflare API token with Workers AI permission — create at https://dash.cloudflare.com/profile/api-tokens (use the 'Edit Workers AI' template or a custom token including Workers AI:Read). Needed for the chat to get AI responses.",
+      "requiredAtBoot": true
+    }
+  ]
+}
